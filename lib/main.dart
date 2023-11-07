@@ -1,4 +1,3 @@
-import 'dart:async';
 
 
 import 'package:after_layout/after_layout.dart';
@@ -6,11 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_for_web/blog/blogView.dart';
 import 'package:flutter_application_for_web/drawer/drawer_view.dart';
 import 'package:flutter_application_for_web/experience/experienceView.dart';
+import 'package:flutter_application_for_web/footer/footer_view.dart';
 import 'package:flutter_application_for_web/headerView/headerview.dart';
 import 'package:flutter_application_for_web/projectView/projectview.dart';
 import 'package:flutter_application_for_web/skills/skills_view.dart';
 import 'navigation_bar/navigation_bar_view.dart';
 import 'package:provider/provider.dart';
+
 
 
 void main() {
@@ -88,7 +89,7 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin{
 
   @override
   Widget build(BuildContext context){
-    final height = MediaQuery.of(context).size.height;
+   // final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
     return MultiProvider(
       providers:[
@@ -101,21 +102,25 @@ class _PortfolioViewState extends State<PortfolioView> with AfterLayoutMixin{
       ],
       child: Scaffold(
         endDrawer: DrawerView(),
-        body: SingleChildScrollView(
-          controller: _scrollController,
-          child: Column(
-            children: [
-              NavigatonBarView(),
-              HeaderView(),
-              ProjectView(key: projectKey,),
-              SkillsView(key: skillsKey,),
-              ExperienceView(key: experienceKey,),
-              BlogView(key: blogKey),
-              Container(height: height, width: width, color: Colors.blue,)
-            ],
+        body: SizedBox(
+          width: width,
+          child: SingleChildScrollView(
+            controller: _scrollController,
+            child: Column(
+              children: [
+                NavigatonBarView(),
+                HeaderView(),
+                ProjectView(key: projectKey,),
+                SkillsView(key: skillsKey,),
+                ExperienceView(key: experienceKey,),
+                BlogView(key: blogKey),
+                FooterView(),
+                //Container(height: height, width: width, color: Colors.blue,)
+              ],
+              
+            ),
             
           ),
-          
         ),
         floatingActionButton: _showBackToTopButton == false
         ? null

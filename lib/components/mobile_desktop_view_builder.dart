@@ -9,7 +9,7 @@ class DesktopMobileViewBuilder extends StatelessWidget {
     super.key,
     this.showMobile,
     required this.mobileView,
-    required this.desktopView
+    required this.desktopView,
   }); 
 
   final bool? showMobile;

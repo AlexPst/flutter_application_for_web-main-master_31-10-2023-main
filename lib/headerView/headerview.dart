@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_for_web/components/mobile_desktop_view_builder.dart';
 import 'package:flutter_application_for_web/constant.dart';
 import 'package:flutter_application_for_web/headerView/headerbody.dart';
-import 'package:responsive_builder/responsive_builder.dart';
+
 
 
 class HeaderView extends StatelessWidget
@@ -59,7 +59,7 @@ class HeaderDesctopView extends StatelessWidget {
       decoration: const BoxDecoration(
         
         image: DecorationImage(
-          image: AssetImage("lib/assets/header_img_01.jpg"),
+          image: AssetImage("lib/images/header_img_01.jpg"),
           fit: BoxFit.cover
         ),
         
@@ -82,7 +82,7 @@ class HeaderDesctopView extends StatelessWidget {
                   ),
                 ]
               ),
-            child: Image.asset('lib/assets/portrait_for_header.png', height: isSmall ? imageWidth : 400,),
+            child: Image.asset('lib/images/portrait_for_header.png', height: isSmall ? imageWidth : 400,),
             ),
            const Expanded(
               child:
@@ -114,7 +114,7 @@ class HeaderMobileView extends StatelessWidget {
          decoration: const BoxDecoration(
           
         image: DecorationImage(
-          image: AssetImage("lib/assets/header_img_01.jpg"),
+          image: AssetImage("lib/images/header_img_01.jpg"),
           fit: BoxFit.cover
           
         ),
@@ -136,7 +136,7 @@ class HeaderMobileView extends StatelessWidget {
                 ]
               ),
             
-            child: Image.asset('lib/assets/portrait_for_header.png', height: 200,),
+            child: Image.asset('lib/images/portrait_for_header.png', height: 200,),
             ),
             //FlutterLogo(size: height * 0.3,),
             const Spacer(),

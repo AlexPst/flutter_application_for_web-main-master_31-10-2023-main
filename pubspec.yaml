@@ -15,11 +15,12 @@ dependencies:
     sdk: flutter
   flutter_email_sender: ^6.0.2
   flutter_scroll_to_top: ^2.3.0
+  font_awesome_flutter: ^10.6.0
   google_fonts: 6.1.0
   provider: ^6.0.5
   responsive_builder: ^0.7.0
   televerse: ^1.11.2
-  
+  url_launcher: ^6.2.1
 
 dev_dependencies:
   flutter_lints: ^2.0.0
@@ -29,4 +30,13 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - lib/assets/
+    - lib\images\header_img_01.jpg
+    - lib\images\portrait_for_header.png 
+    - lib\images\project1.png
+    - lib\images\project2.png
+    - lib\images\project3.png
+    - lib\images\project4.png
+    - lib\images\project5.png
+    - lib\images\project6.png
+
+    

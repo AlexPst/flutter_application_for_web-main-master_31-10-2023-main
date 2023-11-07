@@ -2,9 +2,6 @@
 import 'package:flutter_application_for_web/components/desktop_view_builder.dart';
 import 'package:flutter_application_for_web/components/mobile_desktop_view_builder.dart';
 import 'package:flutter_application_for_web/components/mobile_view_builder.dart';
-import 'package:flutter_application_for_web/experience/experiens_container.dart';
-import 'package:provider/provider.dart';
-import 'package:http/http.dart' as http;
 
 
 
@@ -63,7 +60,8 @@ class BlogDesktopView extends StatelessWidget {
               child: BlogCard(isMobile: false, title: 'Title 1',)
             ),
             Expanded(child: BlogCard(isMobile: false, title: 'Title 2',))
-        ],)
+        ],),
+        SizedBox(height: 100),
       ]);
   }
 }

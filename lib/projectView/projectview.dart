@@ -27,37 +27,37 @@ class ProjectItem{
 
 final kProjectItem = [
   ProjectItem(
-    image: 'lib/assets/project1.png', 
+    image: 'lib/images/project1.png', 
     title: 'Abbey Road Studios', 
     description: 'Reinventing the songwriting process with Flutter', 
     technologies: ['Flutter, Firebase']
     ),
     ProjectItem(
-    image: 'lib/assets/project2.png', 
+    image: 'lib/images/project2.png', 
     title: 'Alibaba Group', 
     description: 'Alibaba scales China’s largest second-hand marketplace with Flutter', 
     technologies: ['Flutter, Firebase']
     ),
     ProjectItem(
-    image: 'lib/assets/project3.png', 
+    image: 'lib/images/project3.png', 
     title: 'Beike', 
     description: 'Beike helps users solve housing problems with Flutter', 
     technologies: ['Flutter, Firebase']
     ),
     ProjectItem(
-    image: 'lib/assets/project4.png', 
+    image: 'lib/images/project4.png', 
     title: 'BMW', 
     description: 'Scaling customer-centric product development at BMW Group with Flutter', 
     technologies: ['Flutter, Firebase']
     ),
     ProjectItem(
-    image: 'lib/assets/project5.png', 
+    image: 'lib/images/project5.png', 
     title: 'Google Pay', 
     description: 'Going global at Google Pay with Flutter', 
     technologies: ['Flutter, Firebase']
     ),
     ProjectItem(
-    image: 'lib/assets/project6.png', 
+    image: 'lib/images/project6.png', 
     title: 'CrowdSource', 
     description: 'Increasing developer speed at Crowdsource with Flutter', 
     technologies: ['Flutter, Firebase']
@@ -93,7 +93,7 @@ class ProjectDesktopView extends StatelessWidget {
     return const DesktopViewBuilder(
       titleText: 'Projects',
       children: [
-        SizedBox(height: 20),
+        SizedBox(height: 10),
         CarouselProjectView(),
       ],
     );
@@ -133,8 +133,8 @@ class CarouselProjectView extends StatelessWidget {
           items: [ for(var item in kProjectItem)
             ProjectItemBody(item: item)], 
           options: CarouselOptions(
-            height: 700,
-            aspectRatio: 9/16,
+            height: 750,
+            aspectRatio: 16/9,
             viewportFraction: 0.5,
             initialPage: 0,
       enableInfiniteScroll: true,
