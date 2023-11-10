@@ -16,23 +16,27 @@ class ProjectItemBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Expanded(child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Row(
         children: [
-          Image.asset(item.image),
-           Text(
-             item.title,
-             style: GoogleFonts.montserrat(textStyle:Theme.of(context).textTheme.titleMedium)),
-           Text(
-            item.description,
-             style: GoogleFonts.montserrat(textStyle:Theme.of(context).textTheme.bodyMedium)),
-           Row(children: [
-             for(var tech in item.technologies)
-             Chip(label: Text(tech),)
-           ],
-           )
+          Expanded(child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset(item.image),
+               Text(
+                 item.title,
+                 style: GoogleFonts.montserrat(textStyle:Theme.of(context).textTheme.titleMedium)),
+               Text(
+                item.description,
+                 style: GoogleFonts.montserrat(textStyle:Theme.of(context).textTheme.bodyMedium)),
+               Row(children: [
+                 for(var tech in item.technologies)
+                 Chip(label: Text(tech),)
+               ],
+               )
+            ],
+          )),
         ],
-      )),
+      ),
     );
   }
 }
